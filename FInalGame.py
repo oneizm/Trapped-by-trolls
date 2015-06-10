@@ -1,4 +1,4 @@
-#Game By Oneizm Studios
+#Game By Oneizm Studios!
 # Right side of room dialogue:
 box_see = '\nI see a box. If there is anything in this box it is just further proof of the lack of troll intellect'
 box_q = 'The top is loose enough for me to move...what if there is is something dangerous in here? Should I open it?'
