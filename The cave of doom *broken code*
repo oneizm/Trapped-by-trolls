@@ -1,0 +1,158 @@
+#Game BY Oneizm Studios
+# game function
+def game():
+
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print ("The Cave of Doom")
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+time.sleep(3)
+
+print (" Your name is Kwame. You are an adventurer one of the few left as the death rate is so high. You enter a dark cave out of what some would call curiosity...but most others would say stupidity.)The cave has a dark history and no one has ever made it out. You contine your decent into the cave")
+time.sleep(3)
+print ("The cave is lightly lit by a glowing sword stuck in a stone.It's quite deep in there and to attempt to pull it out almost seems futile.")
+ch1 = str(input("Do you attempt to take it? [y/n]: "))
+
+# SWORD TAKEN
+if ch1 in ['y', 'Y', 'Yes', 'YES', 'yes']:
+    print("After very little hesitation you attempt to pull the sword out.It slides out like it was stuck in butter! You recive Sword of Light")
+time.sleep(3)
+print("The sword starts to shake in your hands. You feel power radiate through you. Suddenly you hear a voice in your mind")
+time.sleep(1)
+print("The voice says...Hello Master Kwame")
+print("You learn from the sword that the last person to weild it was a king. He was slain by a dragon in the cave and the sword was teleported to the mouth of the cave. Destined to wait for the next person worthy to weild it. That person is you")
+    time.sleep(2)
+    stick = 1
+
+# SWORD NOT TAKEN
+else:
+    print("Glowing swords stuck in stones are not your speed and you decide to leave it. Who knows, it could be cursed.You're rather boring aren't you?")
+    stick = 0
+
+print ("As you proceed further into the cave, you see a small glowing object")
+ch2 = str(input("Do you approach the object? [y/n]"))
+
+# APPROACH DRAGON
+if ch2 in ['y', 'Y', 'Yes', 'YES', 'yes']:
+    print ("You approach the object...")
+    time.sleep(2)
+    print ("As you draw closer, you begin to make out the object as an eye!")
+    time.sleep(1)
+    print ("The eye belongs to a Dragon!")
+    ch3 = str(input("Do you try to fight it? [Y/N]"))
+
+    # FIGHT DRAGON
+    if ch3 in ['y', 'Y', 'Yes', 'YES', 'yes']:
+
+        # WITH SWORD
+        if stick == 1:
+            print ("Luckily you have the Sword of Light to fight with!")
+            print ("You quickly jab the dragon in it's eye and gain an advantage")
+            time.sleep(2)
+            print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            print ("                  Fighting...                   ")
+            print ("   YOU MUST HIT ABOVE A 5 TO KILL THE DRAGON    ")
+            print ("IF THE DRAGON HITS HIGHER THAN YOU, YOU WILL DIE")
+            print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            time.sleep(2)
+            fdmg1 = int(random.randint(3, 10))
+            edmg1 = int(random.randint(1, 5))
+            print ("you hit a", fdmg1)
+            print ("the dragon hits a", edmg1)
+            time.sleep(2)
+
+            if edmg1 > fdmg1:
+                print ("The dragon breaths a collom of fire at you the sword makes a sheild of energy but the fire of a dragon burns hotter than the sun and the sheild collapses!")
+                time.sleep(5)
+                print("Your entire body feels warm")
+                time.sleep(5)
+                print("Then you feel nothing")
+                complete = 0
+                return complete
+
+            elif fdmg1 < 5:
+                print ("You try to fight but you realize that you can't win. You drop the sword and run. When you finally make it back to your house you spend weeks recovering. You can't stop thinling about what could have been. It plagues your dreams and you rarely get a good night of sleep. You tell your children stories of the cave until your evetual death as nothing more than a pesant. Maybe one day one of your decendants will return to the cave they've been told about since their childhood and finish yor fight...")
+                complete = 1
+                return complete
+
+            else:
+                print ("You killed the dragon! The sword tells you that you are now the new king of the lands!")
+                time.sleep(4)
+                print ("For years to come people told stories of the mighty king Kwame. He brought prosperity to the land of England! He lived to be 200 years old and is still celebrated to this day")
+
+                complete = 1
+                return complete
+
+        # WITHOUT SWORD
+        else:
+            print ("You don't have anything to fight with! Bet you wish you had a sword...")
+            time.sleep(2)
+            print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            print ("                  Fighting...                   ")
+            print ("   YOU MUST HIT ABOVE A 5 TO KILL THE DRAGON   ")
+            print ("IF THE DRAGON HITS HIGHER THAN YOU, YOU WILL DIE")
+            print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            time.sleep(2)
+            fdmg1 = int(random.randint(1, 8))
+            edmg1 = int(random.randint(1, 5))
+            print ("you hit a", fdmg1)
+            print ("the dragon hits a", edmg1)
+            time.sleep(2)
+
+            if edmg1 > fdmg1:
+                print ("The dragon looks at you with is head tilted to the side like a confused dog while you swing your firsts at it leg in a futile attempt to do damage to the dragon")
+                time.sleep(3)
+                print("The drago gets bored of your odd antics and eats you...what exactly did you think would happen?")
+                complete = 0
+                return complete
+
+            elif fdmg1 < 5:
+                print ("you punch the drafon in the leg only to break your hand on its think armor. You decide it would be prudent to run at this time and head for the hills.")
+                time.sleep(3)
+                print(" you become the first person to make it out of the cave and people come from lands far an near to hear the story of the dragon. Many adventures go to challange the dragon but none can replicate you feat of leaving alive
+                complete = 1
+                return complete
+
+            else:
+                print ("You run at thr dragon and as it lowers its head you manage to jump on to its long winding neck.You grab a frim hold on its neck using strength that you never knew you had you manage to break its meaty stong neck. You rip its head off and take it as a trophy back to your home town. You are granted the name Kwame Slayer of Dragons.")
+                complete = 1
+                return complete
+
+    #DON'T FIGHT DRAGON
+    print ("You choose not to fight the dragon.")
+    time.sleep(1)
+    print ("As you turn away, it ambushes you and impales you with it's dagger like claws!!! As you bleed out on the cold cave floor you realize you are just another adventure that will never reach their dreams darkness consumes you")
+		time.sleep(5)
+    print ("Then there is nothing")
+    complete = 0
+    return complete
+
+# DON'T APPROACH DRAGON
+else:
+        print ("You turn away from the glowing object, and attempt to leave the cave...")
+        time.sleep(1)
+        print ("But something won't let you....your pride...")
+        time.sleep(2)
+        complete = 0
+        return complete
+
+# game loop
+alive = True
+while alive:
+
+complete = game()
+if complete == 1:
+    alive = input('You managed to escape the cavern alive! Would you like to play again? [y/n]: ')
+    if alive in ['y', 'Y', 'YES', 'yes', 'Yes',]:
+        alive
+
+    else:
+        break
+
+else:
+    alive = input('You have died! Would you like to play again? [y/n]: ')
+    if alive in ['y', 'Y', 'YES', 'yes', 'Yes',]:
+        alive
+
+    else:
+        break
